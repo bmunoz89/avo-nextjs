@@ -1,8 +1,13 @@
 // import App from 'next/app'
+import Layout from 'components/Layout/Layout'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for

@@ -1,10 +1,8 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div>
-      <Navbar />
       <p>Esta es la página de about</p>
     </div>
   )
