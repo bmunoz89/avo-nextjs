@@ -1,5 +1,5 @@
 // import App from 'next/app'
-import Layout from 'components/Layout/Layout'
+import Layout from '@components/Layout/Layout'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
