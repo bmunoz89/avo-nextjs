@@ -1,12 +1,32 @@
 // import App from 'next/app'
 import Layout from '@components/Layout/Layout'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
+import { Fragment } from 'react'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+`
+
+const theme = {
+  colors: {
+    primary: '#0070f3',
+  },
+}
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Fragment>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </Fragment>
   )
 }
 
